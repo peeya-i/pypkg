@@ -1,6 +1,11 @@
+from .randomclass import random as rd1
+# Not import random2 to test whethe it will show up.
+
 __version__="0.1.3"
+
 def show():
     print("pylib-b", __version__)
+    rd1(10)
 
 def show2():
     print("pylib-b show2")
