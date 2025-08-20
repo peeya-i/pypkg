@@ -13,10 +13,10 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[project.dependencies]
-# Dependencies for the main package, if any, or common to both libraries
-# For example:
-requests = ">=2.28.1"
+# PEP 621 requires dependencies to be an array of strings
+dependencies = [
+  "requests>=2.28.1",
+]
 
 [project.optional-dependencies]
 # Dependencies specific to pylib_a
@@ -29,6 +29,15 @@ pylib_b_deps = [
     "torch",
 ]
 
+# Console script entry points
+[project.scripts]
+pypkg_a = "pypkg.pylib_a:show"
+pypkg_b = "pypkg.pylib_b:show"
+
+# Ensure setuptools finds the package and subpackages
+[tool.setuptools.packages.find]
+include = ["pypkg*"]
+
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
