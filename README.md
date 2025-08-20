@@ -18,12 +18,10 @@ The version for pypkg library is in pypkg/__init__.py
 The version for pypkg.pylib_a library is in pypkg/pylib_a/__init__.py
 The version for pypkg.pylib_b library is in pypkg/pylib_b/__init__.py
 
-## To set up using setup.py
+The folder pypkg1 can't be accessed 
+
+## To set up using setup.py - still being tested
 ```
 python setup.py sdist bdist_wheel
 twine upload dist/*
-```
-To use:
-```
-pip install pypkg
 ```
