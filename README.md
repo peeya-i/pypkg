@@ -18,7 +18,7 @@ The version for pypkg library is in pypkg/__init__.py
 The version for pypkg.pylib_a library is in pypkg/pylib_a/__init__.py
 The version for pypkg.pylib_b library is in pypkg/pylib_b/__init__.py
 
-The folder pypkg1 can't be accessed 
+The folder pypkg1 can't be accessed because it is not part of the 
 
 ## To set up using setup.py - still being tested
 ```
