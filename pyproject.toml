@@ -26,7 +26,7 @@ pylib_a_deps = [
 
 # Dependencies specific to pylib_b
 pylib_b_deps = [
-    "torch",
+    "ralf",
 ]
 
 # Console script entry points
