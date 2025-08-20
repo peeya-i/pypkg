@@ -1,5 +1,5 @@
 # PyPkg
-Testing multi library package.
+Testing multi library package. Be careful when testing. The pip install may use cached library if it had imported once before. Delete the VM or container before testing changes.
 
 ## To use pyproject.toml
 There are 3libraries in this package. To install the package, use the following command:
@@ -18,7 +18,9 @@ The version for pypkg library is in pypkg/__init__.py
 The version for pypkg.pylib_a library is in pypkg/pylib_a/__init__.py
 The version for pypkg.pylib_b library is in pypkg/pylib_b/__init__.py
 
-The folder pypkg1 can't be accessed because it is not part of the 
+The folder pypkg1 can't be accessed because it is not part of the package entry point list.
+If the entry is not listed in pyproject's entry point, all functions and classes in the __init__.py are exposed.
+
 
 ## To set up using setup.py - still being tested
 ```
