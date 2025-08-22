@@ -33,7 +33,7 @@ pylib_b_deps = [
 [project.scripts]
 pypkg_a = "pypkg.pylib_a:show"
 # pypkg_b = "pypkg.pylib_b:show"
-pypkg1 = "pypkg1:show"
+pypkg1 = "pypkg1:show_pkg1"
 
 # Ensure setuptools finds the package and subpackages
 [tool.setuptools.packages.find]

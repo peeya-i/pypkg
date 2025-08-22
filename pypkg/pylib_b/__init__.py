@@ -1,5 +1,5 @@
 from .randomclass import random as rd1
-# Not import random2 to test whethe it will show up.
+# Not import random2 to test whether it will show up after importing
 
 __version__="0.1.3"
 
