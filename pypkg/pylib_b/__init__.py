@@ -1,5 +1,6 @@
 from .randomclass import random as rd1
 # Not import random2 to test whether it will show up after importing
+import subprocess
 
 __version__="0.1.3"
 
