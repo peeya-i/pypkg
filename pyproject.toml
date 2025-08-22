@@ -18,6 +18,7 @@ dependencies = [
   "requests>=2.28.1",
 ]
 
+# doesn't seem to check these dependencies
 [project.optional-dependencies]
 # Dependencies specific to pylib_a
 pylib_a_deps = [
