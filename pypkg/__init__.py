@@ -1,3 +1,5 @@
+import subprocess
+import importlib
 
 __version__="0.1.1"
 
@@ -6,13 +8,13 @@ def show():
 
 def testImport(library:str):
     try:
-        a = subprocess.run(['pip', f'{library}'], capture_output=True, text=True, check=True)
-        subprocess.run(['pip', 'install', f'{library}'], capture_output=True, text=True, check=True)
-        import f'{library}'
+        returnmsg = subprocess.run(['pip', 'show', f'{library}'], capture_output=True, text=True, check=True)
+        if (returnmsg.returncode != 0):
+            print(f"Library {library} is not installed. Trying to install it...")
+            subprocess.run(['pip', 'install', f'{library}'], capture_output=True, text=True, check=True)
+        imported_module = importlib.import_module(library)
     except ImportError:
         print(f"Library {library} is NOT installed.")
-    if 
-    import pypkg.pylib_a
 
 
 if __name__ == '__main__':
