@@ -22,7 +22,7 @@ def testImport(library:str):
                 print(f"Failed to install library {library}.")
                 return False # Return False if installation fails
         else:
-            print(f"Library {library} is already installed.")
+            print(f"Library {library} is already installed. Trying to import it...")
 
         try:
             imported_module = importlib.import_module(library)
