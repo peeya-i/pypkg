@@ -1,6 +1,5 @@
 import subprocess
 import importlib
-import sys
 
 __version__="0.1.1"
 
@@ -8,6 +7,7 @@ def show():
     print("pylib-T", __version__)
 
 def testImport(library:str):
+    import sys
     if library in sys.modules:
         print(f"Library {library} is already imported.")
         return True
