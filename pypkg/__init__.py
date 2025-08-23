@@ -1,5 +1,6 @@
 import subprocess
 import importlib
+import sys
 
 __version__="0.1.1"
 
@@ -7,7 +8,6 @@ def show():
     print("pylib-T", __version__)
 
 def testImport(library:str):
-    import sys
     if library in sys.modules:
         print(f"Library {library} is already imported.")
         return True
@@ -16,7 +16,7 @@ def testImport(library:str):
         # Using check=False so that a non-zero exit code does not raise a CalledProcessError
         returnmsg = subprocess.run(['pip', 'show', f'{library}'], capture_output=True, text=True, check=False)
         if (returnmsg.returncode != 0):
-            print(f"Library {library} is not installed. Trying to install it...")
+            print(f"Package {library} is not installed. Trying to install it...")
             installmsg = subprocess.run(['pip', 'install', f'{library}'], capture_output=True, text=True, check=False)
             if installmsg.returncode != 0:
                 print(f"Failed to install library {library}.")
